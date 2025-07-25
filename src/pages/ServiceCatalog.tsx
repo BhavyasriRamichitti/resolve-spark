@@ -60,19 +60,19 @@ const ServiceCatalog = () => {
         <Card className="glass-card p-6 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-4 h-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black/50 w-4 h-4" />
               <Input
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                className="pl-10 bg-white/10 border-white/20 text-black placeholder:text-black/50"
               />
             </div>
             <div className="flex gap-2">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="bg-white/10 border border-white/20 text-white rounded-md px-3 py-2"
+                className="bg-white/10 border border-white/20 text-black rounded-md px-3 py-2"
               >
                 {categories.map((category) => (
                   <option key={category.value} value={category.value} className="bg-slate-800">
@@ -80,7 +80,7 @@ const ServiceCatalog = () => {
                   </option>
                 ))}
               </select>
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button variant="outline" className="border-white/30 text-black hover:bg-white/10">
                 <Filter className="w-4 h-4" />
               </Button>
             </div>
@@ -89,8 +89,8 @@ const ServiceCatalog = () => {
 
         <Tabs defaultValue="all" className="w-full">
           <TabsList className="grid w-full grid-cols-2 bg-white/10 mb-8">
-            <TabsTrigger value="all" className="text-white data-[state=active]:bg-primary">All Services</TabsTrigger>
-            <TabsTrigger value="popular" className="text-white data-[state=active]:bg-primary">Popular</TabsTrigger>
+            <TabsTrigger value="all" className="text-black data-[state=active]:bg-primary">All Services</TabsTrigger>
+            <TabsTrigger value="popular" className="text-black data-[state=active]:bg-primary">Popular</TabsTrigger>
           </TabsList>
 
           <TabsContent value="all">
@@ -108,22 +108,22 @@ const ServiceCatalog = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-white/70 text-sm">{service.popularity}%</span>
+                      <span className="text-black/70 text-sm">{service.popularity}%</span>
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-primary transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-white/70 text-sm mb-4 line-clamp-2">
+                  <p className="text-black/70 text-sm mb-4 line-clamp-2">
                     {service.description}
                   </p>
 
                   <div className="flex items-center justify-between mb-4">
-                    <Badge variant="outline" className="border-white/30 text-white">
+                    <Badge variant="outline" className="border-white/30 text-black">
                       {service.category}
                     </Badge>
-                    <div className="flex items-center gap-1 text-white/70 text-sm">
+                    <div className="flex items-center gap-1 text-black/70 text-sm">
                       <Clock className="w-4 h-4" />
                       {service.estimatedTime}
                     </div>
@@ -142,7 +142,7 @@ const ServiceCatalog = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-2 mb-6">
                 <TrendingUp className="w-5 h-5 text-primary" />
-                <h2 className="text-xl font-semibold text-white">Most Requested Services</h2>
+                <h2 className="text-xl font-semibold text-black">Most Requested Services</h2>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -156,10 +156,10 @@ const ServiceCatalog = () => {
                       <div className="p-4 bg-primary/20 rounded-full text-primary mx-auto mb-4 w-fit">
                         {getIcon(service.icon)}
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">
+                      <h3 className="text-xl font-semibold text-black mb-2">
                         {service.name}
                       </h3>
-                      <p className="text-white/70 mb-4">
+                      <p className="text-black/70 mb-4">
                         {service.description}
                       </p>
                       
@@ -167,16 +167,16 @@ const ServiceCatalog = () => {
                         <div className="text-center">
                           <div className="flex items-center justify-center gap-1 mb-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                            <span className="text-white font-semibold">{service.popularity}%</span>
+                            <span className="text-black font-semibold">{service.popularity}%</span>
                           </div>
-                          <span className="text-white/50 text-xs">Popularity</span>
+                          <span className="text-black/50 text-xs">Popularity</span>
                         </div>
                         <div className="text-center">
                           <div className="flex items-center justify-center gap-1 mb-1">
                             <Clock className="w-4 h-4 text-blue-400" />
-                            <span className="text-white font-semibold">{service.estimatedTime}</span>
+                            <span className="text-black font-semibold">{service.estimatedTime}</span>
                           </div>
-                          <span className="text-white/50 text-xs">Est. Time</span>
+                          <span className="text-black/50 text-xs">Est. Time</span>
                         </div>
                       </div>
 
@@ -190,7 +190,7 @@ const ServiceCatalog = () => {
 
               {/* Service Categories Overview */}
               <Card className="glass-card p-6 mt-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Service Categories</h3>
+                <h3 className="text-xl font-semibold text-black mb-6">Service Categories</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {categories.slice(1).map((category, index) => {
                     const categoryCount = services.filter(s => s.category === category.value && s.isActive).length;
@@ -200,8 +200,8 @@ const ServiceCatalog = () => {
                         className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer slide-in-right"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
-                        <h4 className="font-medium text-white mb-2">{category.label}</h4>
-                        <p className="text-white/70 text-sm">{categoryCount} services</p>
+                        <h4 className="font-medium text-black mb-2">{category.label}</h4>
+                        <p className="text-black/70 text-sm">{categoryCount} services</p>
                       </div>
                     );
                   })}
