@@ -71,8 +71,8 @@ const CreateRequest = () => {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back
           </Button>
-          <h1 className="text-4xl font-bold text-black mb-2">Create Service Request</h1>
-          <p className="text-black/70">Submit a new service request to our support team</p>
+          <h1 className="text-4xl font-bold text-white mb-2">Create Service Request</h1>
+          <p className="text-white/70">Submit a new service request to our support team</p>
         </div>
 
         {/* Progress Indicator */}
