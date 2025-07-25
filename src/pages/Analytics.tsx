@@ -12,7 +12,7 @@ const Analytics = () => {
       <div className="flex items-center justify-between">
         <div>
           <p className="text-black text-sm mb-1">{title}</p>
-          <p className="text-2xl font-bold text-white counter-animate">{value}</p>
+          <p className="text-2xl font-bold text-black counter-animate">{value}</p>
           {change && (
             <p className={`text-sm flex items-center gap-1 mt-1 ${
               change > 0 ? 'text-green-400' : 'text-red-400'
@@ -31,10 +31,10 @@ const Analytics = () => {
     <Card className="glass-card p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-lg font-semibold text-white">{title}</h3>
-          {description && <p className="text-white/70 text-sm">{description}</p>}
+          <h3 className="text-lg font-semibold text-black">{title}</h3>
+          {description && <p className="text-black/70 text-sm">{description}</p>}
         </div>
-        <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white/10">
+        <Button variant="outline" size="sm" className="border-white/30 text-black hover:bg-white/10">
           <Download className="w-4 h-4" />
         </Button>
       </div>
@@ -49,11 +49,11 @@ const Analytics = () => {
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-white mb-2">Analytics & Reports</h1>
-              <p className="text-white/70">Monitor service request performance and trends</p>
+              <h1 className="text-4xl font-bold text-black mb-2">Analytics & Reports</h1>
+              <p className="text-black/70">Monitor service request performance and trends</p>
             </div>
             <div className="flex gap-2">
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button variant="outline" className="border-white/30 text-black hover:bg-white/10">
                 <Calendar className="w-4 h-4 mr-2" />
                 Last 30 Days
               </Button>
@@ -99,10 +99,10 @@ const Analytics = () => {
 
         <Tabs defaultValue="overview" className="w-full">
           <TabsList className="grid w-full grid-cols-4 bg-white/10 mb-8">
-            <TabsTrigger value="overview" className="text-white data-[state=active]:bg-primary">Overview</TabsTrigger>
-            <TabsTrigger value="requests" className="text-white data-[state=active]:bg-primary">Requests</TabsTrigger>
-            <TabsTrigger value="team" className="text-white data-[state=active]:bg-primary">Team Performance</TabsTrigger>
-            <TabsTrigger value="trends" className="text-white data-[state=active]:bg-primary">Trends</TabsTrigger>
+            <TabsTrigger value="overview" className="text-black data-[state=active]:bg-primary">Overview</TabsTrigger>
+            <TabsTrigger value="requests" className="text-black data-[state=active]:bg-primary">Requests</TabsTrigger>
+            <TabsTrigger value="team" className="text-black data-[state=active]:bg-primary">Team Performance</TabsTrigger>
+            <TabsTrigger value="trends" className="text-black data-[state=active]:bg-primary">Trends</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview">
@@ -124,10 +124,10 @@ const Analytics = () => {
                           className="w-4 h-4 rounded-full"
                           style={{ backgroundColor: item.color }}
                         />
-                        <span className="text-white">{item.name}</span>
+                        <span className="text-black">{item.name}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-white font-medium">{item.value}</span>
+                        <span className="text-black font-medium">{item.value}</span>
                         <div className="w-20 h-2 bg-white/10 rounded-full overflow-hidden">
                           <div 
                             className="h-full rounded-full transition-all duration-1000"
@@ -160,10 +160,10 @@ const Analytics = () => {
                           className="w-4 h-4 rounded-full"
                           style={{ backgroundColor: item.color }}
                         />
-                        <span className="text-white">{item.name}</span>
+                        <span className="text-black">{item.name}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-white font-medium">{item.value}</span>
+                        <span className="text-black font-medium">{item.value}</span>
                         <div className="w-20 h-2 bg-white/10 rounded-full overflow-hidden">
                           <div 
                             className="h-full rounded-full transition-all duration-1000"
@@ -194,7 +194,7 @@ const Analytics = () => {
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-white font-medium">{month.month}</span>
+                      <span className="text-black font-medium">{month.month}</span>
                       <div className="flex gap-4 text-sm">
                         <span className="text-blue-400">Requests: {month.requests}</span>
                         <span className="text-green-400">Resolved: {month.resolved}</span>
@@ -234,19 +234,19 @@ const Analytics = () => {
                           <Users className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-white font-medium">{member.name}</h4>
-                          <p className="text-white/70 text-sm">IT Support Agent</p>
+                          <h4 className="text-black font-medium">{member.name}</h4>
+                          <p className="text-black/70 text-sm">IT Support Agent</p>
                         </div>
                       </div>
                       <div className="text-right">
                         <div className="flex gap-6">
                           <div>
-                            <p className="text-white/70 text-xs">Resolved</p>
-                            <p className="text-white font-semibold">{member.resolved}</p>
+                            <p className="text-black/70 text-xs">Resolved</p>
+                            <p className="text-black font-semibold">{member.resolved}</p>
                           </div>
                           <div>
-                            <p className="text-white/70 text-xs">Avg Time</p>
-                            <p className="text-white font-semibold">{member.avgTime}</p>
+                            <p className="text-black/70 text-xs">Avg Time</p>
+                            <p className="text-black font-semibold">{member.avgTime}</p>
                           </div>
                         </div>
                       </div>
@@ -281,9 +281,9 @@ const Analytics = () => {
                         className="flex items-center justify-between slide-in-right"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
-                        <span className="text-white">{category}</span>
+                        <span className="text-black">{category}</span>
                         <div className="flex items-center gap-2">
-                          <span className="text-white/70 text-sm">{times[index]}</span>
+                          <span className="text-black/70 text-sm">{times[index]}</span>
                           <div className={`w-2 h-2 rounded-full ${colors[index]}`} />
                         </div>
                       </div>
@@ -305,7 +305,7 @@ const Analytics = () => {
                         className="flex items-center justify-between slide-in-right"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
-                        <span className="text-white">{service}</span>
+                        <span className="text-black">{service}</span>
                         <div className="flex items-center gap-2">
                           <span className="text-yellow-400 font-medium">{scores[index]}/5</span>
                           <div className="flex">
