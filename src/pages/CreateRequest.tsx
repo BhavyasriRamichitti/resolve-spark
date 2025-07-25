@@ -67,12 +67,12 @@ const CreateRequest = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <Button variant="ghost" className="text-white hover:bg-white/10 mb-4" onClick={() => window.history.back()}>
+          <Button variant="ghost" className="text-black hover:bg-white/10 mb-4" onClick={() => window.history.back()}>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back
           </Button>
-          <h1 className="text-4xl font-bold text-white mb-2">Create Service Request</h1>
-          <p className="text-white/70">Submit a new service request to our support team</p>
+          <h1 className="text-4xl font-bold text-black mb-2">Create Service Request</h1>
+          <p className="text-black/70">Submit a new service request to our support team</p>
         </div>
 
         {/* Progress Indicator */}
@@ -82,8 +82,8 @@ const CreateRequest = () => {
               <div key={stepNumber} className="flex items-center">
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                   step >= stepNumber 
-                    ? 'bg-primary text-white' 
-                    : 'bg-white/10 text-white/50'
+                    ? 'bg-primary text-black' 
+                    : 'bg-white/10 text-black/50'
                 }`}>
                   {stepNumber}
                 </div>
@@ -96,7 +96,7 @@ const CreateRequest = () => {
             ))}
           </div>
           <div className="flex justify-center mt-4">
-            <p className="text-white/70">
+            <p className="text-black/70">
               Step {step} of 3: {
                 step === 1 ? 'Basic Information' :
                 step === 2 ? 'Request Details' : 'Review & Submit'
@@ -109,23 +109,23 @@ const CreateRequest = () => {
           {/* Step 1: Basic Information */}
           {step === 1 && (
             <div className="space-y-6 slide-in-right">
-              <h2 className="text-2xl font-semibold text-white mb-6">Basic Information</h2>
+              <h2 className="text-2xl font-semibold text-black mb-6">Basic Information</h2>
               
               <div>
-                <Label htmlFor="title" className="text-white mb-2 block">Request Title *</Label>
+                <Label htmlFor="title" className="text-black mb-2 block">Request Title *</Label>
                 <Input
                   id="title"
                   value={formData.title}
                   onChange={(e) => setFormData({...formData, title: e.target.value})}
                   placeholder="Brief description of your request"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                  className="bg-white/10 border-white/20 text-black placeholder:text-black/50"
                 />
               </div>
 
               <div>
-                <Label htmlFor="category" className="text-white mb-2 block">Category *</Label>
+                <Label htmlFor="category" className="text-black mb-2 block">Category *</Label>
                 <Select value={formData.category} onValueChange={(value) => setFormData({...formData, category: value})}>
-                  <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                  <SelectTrigger className="bg-white/10 border-white/20 text-black">
                     <SelectValue placeholder="Select a category" />
                   </SelectTrigger>
                   <SelectContent>
@@ -139,9 +139,9 @@ const CreateRequest = () => {
               </div>
 
               <div>
-                <Label htmlFor="priority" className="text-white mb-2 block">Priority *</Label>
+                <Label htmlFor="priority" className="text-black mb-2 block">Priority *</Label>
                 <Select value={formData.priority} onValueChange={(value) => setFormData({...formData, priority: value})}>
-                  <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                  <SelectTrigger className="bg-white/10 border-white/20 text-black">
                     <SelectValue placeholder="Select priority level" />
                   </SelectTrigger>
                   <SelectContent>
@@ -155,13 +155,13 @@ const CreateRequest = () => {
               </div>
 
               <div>
-                <Label htmlFor="department" className="text-white mb-2 block">Department</Label>
+                <Label htmlFor="department" className="text-black mb-2 block">Department</Label>
                 <Input
                   id="department"
                   value={formData.department}
                   onChange={(e) => setFormData({...formData, department: e.target.value})}
                   placeholder="Your department"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                  className="bg-white/10 border-white/20 text-black placeholder:text-black/50"
                 />
               </div>
             </div>
@@ -170,35 +170,35 @@ const CreateRequest = () => {
           {/* Step 2: Request Details */}
           {step === 2 && (
             <div className="space-y-6 slide-in-right">
-              <h2 className="text-2xl font-semibold text-white mb-6">Request Details</h2>
+              <h2 className="text-2xl font-semibold text-black mb-6">Request Details</h2>
               
               <div>
-                <Label htmlFor="description" className="text-white mb-2 block">Detailed Description *</Label>
+                <Label htmlFor="description" className="text-black mb-2 block">Detailed Description *</Label>
                 <Textarea
                   id="description"
                   value={formData.description}
                   onChange={(e) => setFormData({...formData, description: e.target.value})}
                   placeholder="Provide a detailed description of your request, including any error messages or specific requirements..."
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 min-h-[120px]"
+                  className="bg-white/10 border-white/20 text-black placeholder:text-black/50 min-h-[120px]"
                 />
               </div>
 
               <div>
-                <Label className="text-white mb-2 block">Attachments</Label>
+                <Label className="text-black mb-2 block">Attachments</Label>
                 <div className="border-2 border-dashed border-white/20 rounded-lg p-8 text-center hover:border-white/40 transition-colors">
-                  <Upload className="w-12 h-12 text-white/50 mx-auto mb-4" />
-                  <p className="text-white/70 mb-2">Drag and drop files here, or click to browse</p>
-                  <p className="text-white/50 text-sm">Supported formats: PDF, DOC, DOCX, PNG, JPG (Max 10MB)</p>
-                  <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 mt-4">
+                  <Upload className="w-12 h-12 text-black/50 mx-auto mb-4" />
+                  <p className="text-black/70 mb-2">Drag and drop files here, or click to browse</p>
+                  <p className="text-black/50 text-sm">Supported formats: PDF, DOC, DOCX, PNG, JPG (Max 10MB)</p>
+                  <Button variant="outline" className="border-white/30 text-black hover:bg-white/10 mt-4">
                     Choose Files
                   </Button>
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="urgency" className="text-white mb-2 block">Business Impact</Label>
+                <Label htmlFor="urgency" className="text-black mb-2 block">Business Impact</Label>
                 <Select value={formData.urgency} onValueChange={(value) => setFormData({...formData, urgency: value})}>
-                  <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                  <SelectTrigger className="bg-white/10 border-white/20 text-black">
                     <SelectValue placeholder="How does this impact your work?" />
                   </SelectTrigger>
                   <SelectContent>
@@ -215,34 +215,34 @@ const CreateRequest = () => {
           {/* Step 3: Review & Submit */}
           {step === 3 && (
             <div className="space-y-6 slide-in-right">
-              <h2 className="text-2xl font-semibold text-white mb-6">Review & Submit</h2>
+              <h2 className="text-2xl font-semibold text-black mb-6">Review & Submit</h2>
               
               <div className="bg-white/5 rounded-lg p-6 space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label className="text-white/70 text-sm">Title</Label>
-                    <p className="text-white">{formData.title || 'Not specified'}</p>
+                    <Label className="text-black/70 text-sm">Title</Label>
+                    <p className="text-black">{formData.title || 'Not specified'}</p>
                   </div>
                   <div>
-                    <Label className="text-white/70 text-sm">Category</Label>
-                    <p className="text-white">{formData.category || 'Not specified'}</p>
+                    <Label className="text-black/70 text-sm">Category</Label>
+                    <p className="text-black">{formData.category || 'Not specified'}</p>
                   </div>
                   <div>
-                    <Label className="text-white/70 text-sm">Priority</Label>
-                    <p className="text-white capitalize">{formData.priority || 'Not specified'}</p>
+                    <Label className="text-black/70 text-sm">Priority</Label>
+                    <p className="text-black capitalize">{formData.priority || 'Not specified'}</p>
                   </div>
                   <div>
-                    <Label className="text-white/70 text-sm">Department</Label>
-                    <p className="text-white">{formData.department || 'Not specified'}</p>
+                    <Label className="text-black/70 text-sm">Department</Label>
+                    <p className="text-black">{formData.department || 'Not specified'}</p>
                   </div>
                 </div>
                 <div>
-                  <Label className="text-white/70 text-sm">Description</Label>
-                  <p className="text-white">{formData.description || 'Not specified'}</p>
+                  <Label className="text-black/70 text-sm">Description</Label>
+                  <p className="text-black">{formData.description || 'Not specified'}</p>
                 </div>
                 <div>
-                  <Label className="text-white/70 text-sm">Business Impact</Label>
-                  <p className="text-white">{formData.urgency || 'Not specified'}</p>
+                  <Label className="text-black/70 text-sm">Business Impact</Label>
+                  <p className="text-black">{formData.urgency || 'Not specified'}</p>
                 </div>
               </div>
 
@@ -250,7 +250,7 @@ const CreateRequest = () => {
                 <AlertCircle className="w-5 h-5 text-blue-400 mt-0.5" />
                 <div>
                   <p className="text-blue-400 font-medium">What happens next?</p>
-                  <p className="text-white/70 text-sm mt-1">
+                  <p className="text-black/70 text-sm mt-1">
                     Your request will be reviewed and assigned to the appropriate team member. 
                     You'll receive email updates as your request progresses.
                   </p>
@@ -265,7 +265,7 @@ const CreateRequest = () => {
               variant="outline" 
               onClick={prevStep}
               disabled={step === 1}
-              className="border-white/30 text-white hover:bg-white/10 disabled:opacity-50"
+              className="border-white/30 text-black hover:bg-white/10 disabled:opacity-50"
             >
               Previous
             </Button>
