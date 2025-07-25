@@ -49,8 +49,8 @@ const Analytics = () => {
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-black mb-2">Analytics & Reports</h1>
-              <p className="text-black/70">Monitor service request performance and trends</p>
+              <h1 className="text-4xl font-bold text-white mb-2">Analytics & Reports</h1>
+              <p className="text-white/70">Monitor service request performance and trends</p>
             </div>
             <div className="flex gap-2">
               <Button variant="outline" className="border-white/30 text-black hover:bg-white/10">
