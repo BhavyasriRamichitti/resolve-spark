@@ -49,8 +49,8 @@ const Settings = () => {
   const SettingCard = ({ title, description, children }: any) => (
     <Card className="glass-card p-6 mb-6">
       <div className="mb-4">
-        <h3 className="text-lg font-semibold text-white">{title}</h3>
-        {description && <p className="text-white/70 text-sm">{description}</p>}
+        <h3 className="text-lg font-semibold text-black">{title}</h3>
+        {description && <p className="text-black/70 text-sm">{description}</p>}
       </div>
       {children}
     </Card>
@@ -67,10 +67,10 @@ const Settings = () => {
 
         <Tabs defaultValue="general" className="w-full">
           <TabsList className="grid w-full grid-cols-4 bg-white/10 mb-8">
-            <TabsTrigger value="general" className="text-white data-[state=active]:bg-primary">General</TabsTrigger>
-            <TabsTrigger value="notifications" className="text-white data-[state=active]:bg-primary">Notifications</TabsTrigger>
-            <TabsTrigger value="security" className="text-white data-[state=active]:bg-primary">Security</TabsTrigger>
-            <TabsTrigger value="integrations" className="text-white data-[state=active]:bg-primary">Integrations</TabsTrigger>
+            <TabsTrigger value="general" className="text-black data-[state=active]:bg-primary">General</TabsTrigger>
+            <TabsTrigger value="notifications" className="text-black data-[state=active]:bg-primary">Notifications</TabsTrigger>
+            <TabsTrigger value="security" className="text-black data-[state=active]:bg-primary">Security</TabsTrigger>
+            <TabsTrigger value="integrations" className="text-black data-[state=active]:bg-primary">Integrations</TabsTrigger>
           </TabsList>
 
           <TabsContent value="general">
@@ -81,7 +81,7 @@ const Settings = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="companyName" className="text-white mb-2 block">Company Name</Label>
+                    <Label htmlFor="companyName" className="text-black mb-2 block">Company Name</Label>
                     <Input
                       id="companyName"
                       value={settings.general.companyName}
@@ -89,18 +89,18 @@ const Settings = () => {
                         ...settings,
                         general: { ...settings.general, companyName: e.target.value }
                       })}
-                      className="bg-white/10 border-white/20 text-white"
+                      className="bg-white/10 border-white/20 text-black"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="timezone" className="text-white mb-2 block">Timezone</Label>
+                    <Label htmlFor="timezone" className="text-black mb-2 block">Timezone</Label>
                     <Select value={settings.general.timezone} onValueChange={(value) => 
                       setSettings({
                         ...settings,
                         general: { ...settings.general, timezone: value }
                       })
                     }>
-                      <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                      <SelectTrigger className="bg-white/10 border-white/20 text-black">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -127,14 +127,14 @@ const Settings = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="dateFormat" className="text-white mb-2 block">Date Format</Label>
+                    <Label htmlFor="dateFormat" className="text-black mb-2 block">Date Format</Label>
                     <Select value={settings.general.dateFormat} onValueChange={(value) =>
                       setSettings({
                         ...settings,
                         general: { ...settings.general, dateFormat: value }
                       })
                     }>
-                      <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                      <SelectTrigger className="bg-white/10 border-white/20 text-black">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -145,14 +145,14 @@ const Settings = () => {
                     </Select>
                   </div>
                   <div>
-                    <Label htmlFor="language" className="text-white mb-2 block">Language</Label>
+                    <Label htmlFor="language" className="text-black mb-2 block">Language</Label>
                     <Select value={settings.general.language} onValueChange={(value) =>
                       setSettings({
                         ...settings,
                         general: { ...settings.general, language: value }
                       })
                     }>
-                      <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                      <SelectTrigger className="bg-white/10 border-white/20 text-black">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -179,8 +179,8 @@ const Settings = () => {
                     <div className="flex items-center gap-3">
                       <Mail className="w-5 h-5 text-primary" />
                       <div>
-                        <p className="text-white font-medium">Email Notifications</p>
-                        <p className="text-white/70 text-sm">Receive updates via email</p>
+                        <p className="text-black font-medium">Email Notifications</p>
+                        <p className="text-black/70 text-sm">Receive updates via email</p>
                       </div>
                     </div>
                     <Switch
@@ -198,8 +198,8 @@ const Settings = () => {
                     <div className="flex items-center gap-3">
                       <Bell className="w-5 h-5 text-primary" />
                       <div>
-                        <p className="text-white font-medium">Push Notifications</p>
-                        <p className="text-white/70 text-sm">Browser push notifications</p>
+                        <p className="text-black font-medium">Push Notifications</p>
+                        <p className="text-black/70 text-sm">Browser push notifications</p>
                       </div>
                     </div>
                     <Switch
@@ -217,8 +217,8 @@ const Settings = () => {
                     <div className="flex items-center gap-3">
                       <Bell className="w-5 h-5 text-primary" />
                       <div>
-                        <p className="text-white font-medium">SMS Notifications</p>
-                        <p className="text-white/70 text-sm">Critical alerts via SMS</p>
+                        <p className="text-black font-medium">SMS Notifications</p>
+                        <p className="text-black/70 text-sm">Critical alerts via SMS</p>
                       </div>
                     </div>
                     <Switch
@@ -234,14 +234,14 @@ const Settings = () => {
                 </div>
 
                 <div className="mt-6">
-                  <Label className="text-white mb-2 block">Digest Frequency</Label>
+                  <Label className="text-black mb-2 block">Digest Frequency</Label>
                   <Select value={settings.notifications.digestFrequency} onValueChange={(value) =>
                     setSettings({
                       ...settings,
                       notifications: { ...settings.notifications, digestFrequency: value }
                     })
                   }>
-                    <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                    <SelectTrigger className="bg-white/10 border-white/20 text-black">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -274,8 +274,8 @@ const Settings = () => {
                     <div className="flex items-center gap-3">
                       <Shield className="w-5 h-5 text-primary" />
                       <div>
-                        <p className="text-white font-medium">Two-Factor Authentication</p>
-                        <p className="text-white/70 text-sm">Add extra security to your account</p>
+                        <p className="text-black font-medium">Two-Factor Authentication</p>
+                        <p className="text-black/70 text-sm">Add extra security to your account</p>
                       </div>
                     </div>
                     <Switch
@@ -292,7 +292,7 @@ const Settings = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                   <div>
-                    <Label htmlFor="sessionTimeout" className="text-white mb-2 block">Session Timeout (hours)</Label>
+                    <Label htmlFor="sessionTimeout" className="text-black mb-2 block">Session Timeout (hours)</Label>
                     <Input
                       id="sessionTimeout"
                       type="number"
@@ -301,11 +301,11 @@ const Settings = () => {
                         ...settings,
                         security: { ...settings.security, sessionTimeout: e.target.value }
                       })}
-                      className="bg-white/10 border-white/20 text-white"
+                      className="bg-white/10 border-white/20 text-black"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="passwordExpiry" className="text-white mb-2 block">Password Expiry (days)</Label>
+                    <Label htmlFor="passwordExpiry" className="text-black mb-2 block">Password Expiry (days)</Label>
                     <Input
                       id="passwordExpiry"
                       type="number"
@@ -314,7 +314,7 @@ const Settings = () => {
                         ...settings,
                         security: { ...settings.security, passwordExpiry: e.target.value }
                       })}
-                      className="bg-white/10 border-white/20 text-white"
+                      className="bg-white/10 border-white/20 text-black"
                     />
                   </div>
                 </div>
@@ -337,7 +337,7 @@ const Settings = () => {
               >
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="webhookUrl" className="text-white mb-2 block">Webhook URL</Label>
+                    <Label htmlFor="webhookUrl" className="text-black mb-2 block">Webhook URL</Label>
                     <Input
                       id="webhookUrl"
                       value={settings.integrations.webhookUrl}
@@ -346,12 +346,12 @@ const Settings = () => {
                         integrations: { ...settings.integrations, webhookUrl: e.target.value }
                       })}
                       placeholder="https://your-app.com/webhook"
-                      className="bg-white/10 border-white/20 text-white"
+                      className="bg-white/10 border-white/20 text-black"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="apiKey" className="text-white mb-2 block">API Key</Label>
+                    <Label htmlFor="apiKey" className="text-black mb-2 block">API Key</Label>
                     <div className="flex gap-2">
                       <Input
                         id="apiKey"
@@ -362,9 +362,9 @@ const Settings = () => {
                           integrations: { ...settings.integrations, apiKey: e.target.value }
                         })}
                         placeholder="Enter your API key"
-                        className="bg-white/10 border-white/20 text-white"
+                        className="bg-white/10 border-white/20 text-black"
                       />
-                      <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                      <Button variant="outline" className="border-white/30 text-black hover:bg-white/10">
                         <Key className="w-4 h-4" />
                       </Button>
                     </div>
@@ -378,14 +378,14 @@ const Settings = () => {
               >
                 <div className="space-y-4">
                   <div>
-                    <Label className="text-white mb-2 block">Email Provider</Label>
+                    <Label className="text-black mb-2 block">Email Provider</Label>
                     <Select value={settings.integrations.emailProvider} onValueChange={(value) =>
                       setSettings({
                         ...settings,
                         integrations: { ...settings.integrations, emailProvider: value }
                       })
                     }>
-                      <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                      <SelectTrigger className="bg-white/10 border-white/20 text-black">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -405,14 +405,14 @@ const Settings = () => {
               >
                 <div className="space-y-4">
                   <div>
-                    <Label className="text-white mb-2 block">Database Backup Frequency</Label>
+                    <Label className="text-black mb-2 block">Database Backup Frequency</Label>
                     <Select value={settings.integrations.databaseBackup} onValueChange={(value) =>
                       setSettings({
                         ...settings,
                         integrations: { ...settings.integrations, databaseBackup: value }
                       })
                     }>
-                      <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                      <SelectTrigger className="bg-white/10 border-white/20 text-black">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
