@@ -11,6 +11,7 @@ const ServiceCatalog = () => {
   const [services] = useState(mockServiceCatalog);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
+  
 
   const categories = [
     { value: "all", label: "All Services" },
