@@ -24,9 +24,9 @@ All colors MUST be HSL for proper theming.
     --primary-foreground: 0 0% 100%;
     --primary-glow: 217 91% 70%; /* Lighter blue for glows */
 
-    /* Secondary colors - Light Blue */
-    --secondary: 210 100% 95%; /* Very light blue */
-    --secondary-foreground: 217 91% 60%;
+    /* Secondary colors - Grayish Blue */
+    --secondary: 215 25% 27%; /* Grayish blue */
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted backgrounds */
     --muted: 210 40% 98%; /* Very light blue-gray */
