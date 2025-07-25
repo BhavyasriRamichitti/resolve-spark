@@ -22,8 +22,8 @@ const Dashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-black mb-2">Dashboard</h1>
-          <p className="text-black/70">Monitor and manage service requests</p>
+          <h1 className="text-4xl font-bold text-white mb-2">Dashboard</h1>
+          <p className="text-white/70">Monitor and manage service requests</p>
         </div>
 
         {/* Stats Cards */}
