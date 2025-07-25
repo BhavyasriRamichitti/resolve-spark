@@ -8,16 +8,16 @@ All colors MUST be HSL for proper theming.
 
 @layer base {
   :root {
-    /* Base colors - White/Blue theme */
-    --background: 0 0% 100%; /* Pure white */
-    --foreground: 220 25% 25%; /* Dark blue-gray */
+    /* Base colors - Light background with dark text */
+    --background: 210 40% 98%; /* Very light blue-gray background */
+    --foreground: 220 39% 11%; /* Very dark blue for text */
 
     /* Card and surface colors */
-    --card: 0 0% 100%; /* Pure white */
-    --card-foreground: 220 25% 25%;
+    --card: 0 0% 96%; /* Light gray for cards */
+    --card-foreground: 220 39% 11%; /* Dark text on cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 25%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 220 39% 11%;
 
     /* Primary brand colors - Blue */
     --primary: 217 91% 60%; /* Blue-500 */
@@ -29,12 +29,12 @@ All colors MUST be HSL for proper theming.
     --secondary-foreground: 0 0% 100%;
 
     /* Muted backgrounds */
-    --muted: 210 40% 98%; /* Very light blue-gray */
-    --muted-foreground: 215 25% 40%; /* Medium blue-gray */
+    --muted: 210 40% 94%; /* Light blue-gray for muted areas */
+    --muted-foreground: 215 25% 35%; /* Medium dark blue-gray for muted text */
 
     /* Accent colors - Blue */
-    --accent: 217 91% 60%; /* Blue accent */
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 92%; /* Light blue-gray accent */
+    --accent-foreground: 220 39% 11%; /* Dark text on accent */
 
     /* Status colors */
     --success: 142 76% 36%; /* Green for success */
@@ -47,18 +47,18 @@ All colors MUST be HSL for proper theming.
     --destructive-foreground: 0 0% 100%;
 
     /* Border and input colors */
-    --border: 214 32% 91%; /* Light blue-gray */
-    --input: 214 32% 91%;
+    --border: 214 32% 88%; /* Light blue-gray borders */
+    --input: 0 0% 94%; /* Light gray input backgrounds */
     --ring: 217 91% 60%; /* Blue ring */
 
-    /* Gradients - White/Blue theme */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(210 100% 95%));
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(210 100% 70%));
-    --gradient-card: linear-gradient(135deg, hsla(0 0% 100% / 0.9), hsla(210 100% 98% / 0.8));
+    /* Gradients - Light background theme */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(210 40% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(210 40% 90%));
+    --gradient-card: linear-gradient(135deg, hsla(0 0% 96% / 0.9), hsla(210 40% 98% / 0.8));
     
-    /* Glass morphism effects - White/Blue theme */
-    --glass-bg: hsla(0 0% 100% / 0.8);
-    --glass-border: hsla(217 91% 60% / 0.2);
+    /* Glass morphism effects - Light background theme */
+    --glass-bg: hsla(0 0% 96% / 0.8);
+    --glass-border: hsla(217 91% 60% / 0.3);
     
     /* Shadows with brand colors */
     --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
@@ -71,21 +71,14 @@ All colors MUST be HSL for proper theming.
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 40% 96%;
+    --sidebar-foreground: 220 39% 11%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 92%;
+    --sidebar-accent-foreground: 220 39% 11%;
+    --sidebar-border: 214 32% 88%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
