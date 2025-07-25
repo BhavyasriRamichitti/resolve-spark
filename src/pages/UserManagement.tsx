@@ -64,8 +64,8 @@ const UserManagement = () => {
           <Card className="glass-card p-6 hover-scale">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/70 text-sm">Total Users</p>
-                <p className="text-2xl font-bold text-white counter-animate">{userStats.total}</p>
+                <p className="text-black/70 text-sm">Total Users</p>
+                <p className="text-2xl font-bold text-black counter-animate">{userStats.total}</p>
               </div>
               <Users className="w-8 h-8 text-primary" />
             </div>
@@ -74,7 +74,7 @@ const UserManagement = () => {
           <Card className="glass-card p-6 hover-scale">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/70 text-sm">Active</p>
+                <p className="text-black/70 text-sm">Active</p>
                 <p className="text-2xl font-bold text-green-400 counter-animate">{userStats.active}</p>
               </div>
               <UserCheck className="w-8 h-8 text-green-400" />
@@ -84,7 +84,7 @@ const UserManagement = () => {
           <Card className="glass-card p-6 hover-scale">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/70 text-sm">Admins</p>
+                <p className="text-black/70 text-sm">Admins</p>
                 <p className="text-2xl font-bold text-red-400 counter-animate">{userStats.admins}</p>
               </div>
               <Shield className="w-8 h-8 text-red-400" />
@@ -94,7 +94,7 @@ const UserManagement = () => {
           <Card className="glass-card p-6 hover-scale">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/70 text-sm">Agents</p>
+                <p className="text-black/70 text-sm">Agents</p>
                 <p className="text-2xl font-bold text-blue-400 counter-animate">{userStats.agents}</p>
               </div>
               <UserCheck className="w-8 h-8 text-blue-400" />
@@ -104,7 +104,7 @@ const UserManagement = () => {
           <Card className="glass-card p-6 hover-scale">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/70 text-sm">Users</p>
+                <p className="text-black/70 text-sm">Users</p>
                 <p className="text-2xl font-bold text-purple-400 counter-animate">{userStats.regularUsers}</p>
               </div>
               <Users className="w-8 h-8 text-purple-400" />
@@ -114,9 +114,9 @@ const UserManagement = () => {
 
         <Tabs defaultValue="users" className="w-full">
           <TabsList className="grid w-full grid-cols-3 bg-white/10 mb-8">
-            <TabsTrigger value="users" className="text-white data-[state=active]:bg-primary">All Users</TabsTrigger>
-            <TabsTrigger value="roles" className="text-white data-[state=active]:bg-primary">Roles & Permissions</TabsTrigger>
-            <TabsTrigger value="departments" className="text-white data-[state=active]:bg-primary">Departments</TabsTrigger>
+            <TabsTrigger value="users" className="text-black data-[state=active]:bg-primary">All Users</TabsTrigger>
+            <TabsTrigger value="roles" className="text-black data-[state=active]:bg-primary">Roles & Permissions</TabsTrigger>
+            <TabsTrigger value="departments" className="text-black data-[state=active]:bg-primary">Departments</TabsTrigger>
           </TabsList>
 
           <TabsContent value="users">
@@ -124,19 +124,19 @@ const UserManagement = () => {
             <Card className="glass-card p-6 mb-8">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black/50 w-4 h-4" />
                   <Input
                     placeholder="Search users..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                    className="pl-10 bg-white/10 border-white/20 text-black placeholder:text-black/50"
                   />
                 </div>
                 <div className="flex gap-2">
                   <select
                     value={selectedRole}
                     onChange={(e) => setSelectedRole(e.target.value)}
-                    className="bg-white/10 border border-white/20 text-white rounded-md px-3 py-2"
+                    className="bg-white/10 border border-white/20 text-black rounded-md px-3 py-2"
                   >
                     {roles.map((role) => (
                       <option key={role.value} value={role.value} className="bg-slate-800">
@@ -144,7 +144,7 @@ const UserManagement = () => {
                       </option>
                     ))}
                   </select>
-                  <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                  <Button variant="outline" className="border-white/30 text-black hover:bg-white/10">
                     <Filter className="w-4 h-4" />
                   </Button>
                 </div>
@@ -167,15 +167,15 @@ const UserManagement = () => {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <h3 className="font-semibold text-white">{user.name}</h3>
-                        <p className="text-white/70 text-sm">{user.email}</p>
+                        <h3 className="font-semibold text-black">{user.name}</h3>
+                        <p className="text-black/70 text-sm">{user.email}</p>
                       </div>
                     </div>
                     <div className="flex gap-1">
-                      <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+                      <Button variant="ghost" size="sm" className="text-black hover:bg-white/10">
                         <Edit className="w-4 h-4" />
                       </Button>
-                      <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+                      <Button variant="ghost" size="sm" className="text-black hover:bg-white/10">
                         <Trash2 className="w-4 h-4" />
                       </Button>
                     </div>
@@ -183,19 +183,19 @@ const UserManagement = () => {
 
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-white/70 text-sm">Role</span>
-                      <Badge className={`text-white ${getRoleColor(user.role)} capitalize`}>
+                      <span className="text-black/70 text-sm">Role</span>
+                      <Badge className={`text-black ${getRoleColor(user.role)} capitalize`}>
                         {user.role}
                       </Badge>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <span className="text-white/70 text-sm">Department</span>
-                      <span className="text-white text-sm">{user.department}</span>
+                      <span className="text-black/70 text-sm">Department</span>
+                      <span className="text-black text-sm">{user.department}</span>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <span className="text-white/70 text-sm">Status</span>
+                      <span className="text-black/70 text-sm">Status</span>
                       <div className="flex items-center gap-2">
                         {user.status === 'active' ? (
                           <UserCheck className="w-4 h-4 text-green-400" />
@@ -210,7 +210,7 @@ const UserManagement = () => {
                   </div>
 
                   <div className="mt-4 pt-4 border-t border-white/10">
-                    <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
+                    <Button variant="outline" className="w-full border-white/30 text-black hover:bg-white/10">
                       View Profile
                     </Button>
                   </div>
@@ -229,10 +229,10 @@ const UserManagement = () => {
                 >
                   <div className="text-center mb-6">
                     <div className={`w-16 h-16 ${role.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <Shield className="w-8 h-8 text-white" />
+                      <Shield className="w-8 h-8 text-black" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{role.label}</h3>
-                    <p className="text-white/70 text-sm">
+                    <h3 className="text-xl font-semibold text-black mb-2">{role.label}</h3>
+                    <p className="text-black/70 text-sm">
                       {role.value === 'admin' && 'Full system access and user management'}
                       {role.value === 'agent' && 'Handle requests and manage tickets'}
                       {role.value === 'user' && 'Submit and track service requests'}
@@ -240,7 +240,7 @@ const UserManagement = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="font-medium text-white">Permissions</h4>
+                    <h4 className="font-medium text-black">Permissions</h4>
                     <div className="space-y-2">
                       {role.value === 'admin' && [
                         'User Management',
@@ -250,7 +250,7 @@ const UserManagement = () => {
                       ].map((permission) => (
                         <div key={permission} className="flex items-center gap-2">
                           <div className="w-2 h-2 bg-green-400 rounded-full" />
-                          <span className="text-white/80 text-sm">{permission}</span>
+                          <span className="text-black/80 text-sm">{permission}</span>
                         </div>
                       ))}
                       
@@ -262,7 +262,7 @@ const UserManagement = () => {
                       ].map((permission) => (
                         <div key={permission} className="flex items-center gap-2">
                           <div className="w-2 h-2 bg-blue-400 rounded-full" />
-                          <span className="text-white/80 text-sm">{permission}</span>
+                          <span className="text-black/80 text-sm">{permission}</span>
                         </div>
                       ))}
                       
@@ -274,7 +274,7 @@ const UserManagement = () => {
                       ].map((permission) => (
                         <div key={permission} className="flex items-center gap-2">
                           <div className="w-2 h-2 bg-green-400 rounded-full" />
-                          <span className="text-white/80 text-sm">{permission}</span>
+                          <span className="text-black/80 text-sm">{permission}</span>
                         </div>
                       ))}
                     </div>
@@ -282,8 +282,8 @@ const UserManagement = () => {
 
                   <div className="mt-6 pt-4 border-t border-white/10">
                     <div className="flex items-center justify-between">
-                      <span className="text-white/70 text-sm">Users with this role</span>
-                      <span className="text-white font-medium">
+                      <span className="text-black/70 text-sm">Users with this role</span>
+                      <span className="text-black font-medium">
                         {users.filter(u => u.role === role.value).length}
                       </span>
                     </div>
@@ -307,31 +307,31 @@ const UserManagement = () => {
                       <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
                         <Users className="w-6 h-6 text-primary" />
                       </div>
-                      <h3 className="text-lg font-semibold text-white">{department}</h3>
+                      <h3 className="text-lg font-semibold text-black">{department}</h3>
                     </div>
 
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-white/70 text-sm">Total Users</span>
-                        <span className="text-white font-medium">{deptUsers.length}</span>
+                        <span className="text-black/70 text-sm">Total Users</span>
+                        <span className="text-black font-medium">{deptUsers.length}</span>
                       </div>
                       
                       <div className="flex items-center justify-between">
-                        <span className="text-white/70 text-sm">Active</span>
+                        <span className="text-black/70 text-sm">Active</span>
                         <span className="text-green-400 font-medium">
                           {deptUsers.filter(u => u.status === 'active').length}
                         </span>
                       </div>
                       
                       <div className="flex items-center justify-between">
-                        <span className="text-white/70 text-sm">Admins</span>
+                        <span className="text-black/70 text-sm">Admins</span>
                         <span className="text-red-400 font-medium">
                           {deptUsers.filter(u => u.role === 'admin').length}
                         </span>
                       </div>
                       
                       <div className="flex items-center justify-between">
-                        <span className="text-white/70 text-sm">Agents</span>
+                        <span className="text-black/70 text-sm">Agents</span>
                         <span className="text-blue-400 font-medium">
                           {deptUsers.filter(u => u.role === 'agent').length}
                         </span>
@@ -339,7 +339,7 @@ const UserManagement = () => {
                     </div>
 
                     <div className="mt-4 pt-4 border-t border-white/10">
-                      <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
+                      <Button variant="outline" className="w-full border-white/30 text-black hover:bg-white/10">
                         Manage Department
                       </Button>
                     </div>
