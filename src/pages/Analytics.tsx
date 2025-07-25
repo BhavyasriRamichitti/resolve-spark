@@ -11,7 +11,7 @@ const Analytics = () => {
     <Card className="glass-card p-6 hover-scale">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-white/70 text-sm mb-1">{title}</p>
+          <p className="text-black text-sm mb-1">{title}</p>
           <p className="text-2xl font-bold text-white counter-animate">{value}</p>
           {change && (
             <p className={`text-sm flex items-center gap-1 mt-1 ${
